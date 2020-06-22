@@ -25,18 +25,16 @@ Open the `index.html` file in your browser and check the console in Chrome Dev T
 Figure out what you need to change to give Javascript access to the `h1#header` element.
 
 **YOUR NOTES**
-```
-
-```
+In index.html you have to make sure that the code runs after the HTML has loaded, otherwise it will return undefined. 
+You can add defer or move index.js to the bottom but still inside the <body> tag. 
+https://stackoverflow.com/questions/55131086/console-log-return-null
 
 ## Deliverable 2
 
 Now that you have access to the `h1#header` element, use Javascript to change the element's font color to red (of course).
 
 **YOUR NOTES**
-```
-
-```
+variableName.style.color = "red"
 
 ## Deliverable 3
 
@@ -56,9 +54,11 @@ Create a DOM element that looks like this for each player and append it to the `
 ```
 
 **YOUR NOTES**
-```
-
-```
+1. We have array of players in data.js.
+2. Then we do varName = document.querySelector to find a place to insert our players.
+3. After that we iterate through the array of players (.forEach, function (elementName))
+4. In a meantime we insert every element of the array inside our HTML via varName.innerHTML +=
+5. Check the result at index.html
 
 ## Deliverable 4
 
@@ -67,6 +67,6 @@ Uh-oh! A Manchester City player, Raheem Sterling, snuck into our list. Use Javas
 Hint: You can use `querySelector` with [CSS Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors) to find an element with a specific data-number. 
 
 **YOUR NOTES**
-```
-
-```
+1. playersSelector gives us an access to the player-container
+2. .querySelector("[data-number='7']")
+3. .remove()
